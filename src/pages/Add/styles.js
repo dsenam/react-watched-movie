@@ -9,9 +9,14 @@ export const Container = styled.div`
 
   input {
     width: 35%;
-    height: 40px;
+    height: 50px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #993399;
+
+    ::placeholder {
+      font-size: 20px;
+      color: #dcdcdc;
+    }
   }
 `;

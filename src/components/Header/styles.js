@@ -16,22 +16,18 @@ export const Container = styled.header`
 
   nav {
     display: flex;
-    width: 30%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: flex-end;
 
     a {
       color: white;
       font-size: 20px;
+      margin: 0 10px;
 
       :hover {
         background-color: #ff00ff;
-        padding: 5px;
+        padding: 2px;
       }
-    }
-
-    button {
-      background-color: #ff00ff;
-      padding: 10px;
     }
   }
 `;

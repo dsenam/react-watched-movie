@@ -17,9 +17,7 @@ function Header() {
 
         <Link to="/watched">Assistidos</Link>
 
-        <button type="button">
-          <Link to="/add">Adicionar</Link>
-        </button>
+        <Link to="/add">Adicionar</Link>
       </nav>
     </Container>
   );
