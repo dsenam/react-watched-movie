@@ -11,7 +11,7 @@ export default createGlobalStyle`
         height: 100%;
     }
     body{
-        background: #fafafa;
+        background: black;
         font-size: 14px Arial, Helvetica, sans-serif;
         -webkit-font-smoothing: antialiased !important;
     }
@@ -24,4 +24,10 @@ export default createGlobalStyle`
     button {
         cursor:pointer;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    
 `;

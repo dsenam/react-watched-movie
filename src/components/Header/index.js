@@ -1,29 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Content } from './styles';
+import { RiMovie2Line } from 'react-icons/ri';
+import { Container } from './styles';
 
 function Header() {
   return (
     <Container>
-      <Content>
-        <div>
-          <Link to="/">WatchList</Link>
-        </div>
+      <div>
+        <Link to="/">
+          <RiMovie2Line size={60} color="#fff" />
+        </Link>
+      </div>
 
-        <ul>
-          <li>
-            <Link to="/">WatchList</Link>
-          </li>
+      <nav>
+        <Link to="/">Para assistir</Link>
 
-          <li>
-            <Link to="/watched">Watched</Link>
-          </li>
+        <Link to="/watched">Assistidos</Link>
 
-          <li>
-            <Link to="/add">+ Add</Link>
-          </li>
-        </ul>
-      </Content>
+        <button type="button">
+          <Link to="/add">Adicionar</Link>
+        </button>
+      </nav>
     </Container>
   );
 }
