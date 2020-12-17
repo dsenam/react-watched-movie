@@ -13,6 +13,7 @@ export const Container = styled.div`
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #993399;
+    font-size: 20px;
 
     ::placeholder {
       font-size: 20px;

@@ -58,6 +58,10 @@ export const Container = styled.div`
       color: #fff;
       margin-top: 30px;
       padding: 20px;
+
+      :hover {
+        background-color: #7a297a;
+      }
     }
   }
 `;

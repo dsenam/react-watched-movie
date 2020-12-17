@@ -5,7 +5,12 @@ import { GlobalContext } from '../../context/GlobalState';
 import { Container } from './styles';
 
 function ResultCard({ movie }) {
-  const { addMovieToWatchList } = useContext(GlobalContext);
+  const { addMovieToWatchList, watchlist } = useContext(GlobalContext);
+
+  const storedMovie = watchlist.find((o) => o.id === movie.id);
+
+  const watchlistDisabled = !!storedMovie;
+
   return (
     <Container>
       {movie.poster_path ? (
@@ -26,7 +31,11 @@ function ResultCard({ movie }) {
         )}
         <h3>{movie.release_date.substring(0, 4)}</h3>
 
-        <button type="button" onClick={() => addMovieToWatchList(movie)}>
+        <button
+          disable={watchlistDisabled}
+          type="button"
+          onClick={() => addMovieToWatchList(movie)}
+        >
           Adicionar a lista
         </button>
       </div>
