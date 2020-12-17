@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   background-color: #fff;
   margin-top: 15px;
-  border: 1px solid #fff;
+  border: 1px solid #993399;
 
   img {
     height: 100%;

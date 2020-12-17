@@ -4,14 +4,18 @@ import GlobalStyle from './styles/global';
 import Header from './components/Header';
 import Routes from './routes';
 
+import { GlobalProvider } from './context/GlobalState';
+
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Routes />
-        <GlobalStyle />
-      </Router>
+      <GlobalProvider>
+        <Router>
+          <Header />
+          <Routes />
+          <GlobalStyle />
+        </Router>
+      </GlobalProvider>
     </>
   );
 }

@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalState';
 
 import { Container } from './styles';
 
 function ResultCard({ movie }) {
+  const { addMovieToWatchList } = useContext(GlobalContext);
   return (
     <Container>
       {movie.poster_path ? (
@@ -24,7 +26,9 @@ function ResultCard({ movie }) {
         )}
         <h3>{movie.release_date.substring(0, 4)}</h3>
 
-        <button type="button">Adicionar a lista</button>
+        <button type="button" onClick={() => addMovieToWatchList(movie)}>
+          Adicionar a lista
+        </button>
       </div>
     </Container>
   );
