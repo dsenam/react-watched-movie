@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
-
+import ResultCard from '../../components/ResultCard';
 import { Container } from './styles';
 
 function Add() {
@@ -15,7 +15,6 @@ function Add() {
     );
 
     setResults(response.data.results);
-    console.log(results);
   }
 
   return (
@@ -26,6 +25,15 @@ function Add() {
         value={query}
         onChange={handleChange}
       />
+      {results.length > 0 && (
+        <ul>
+          {results.map((movie) => (
+            <li key={movie.id}>
+              <ResultCard movie={movie} />
+            </li>
+          ))}
+        </ul>
+      )}
     </Container>
   );
 }
